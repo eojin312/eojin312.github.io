@@ -5,3 +5,16 @@ categories: 단상
 ---
 
 열심히 운영해야지
+
+
+```java
+public class A {
+    private String aa;
+    
+    public A () {
+        
+    }
+}
+```
+
+
