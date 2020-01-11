@@ -7,13 +7,13 @@ categories: 회고
 학사관리 프로그램을 열심히 코딩하는 중에 Controller 에서 JSP(View) 로 데이터를 넘기는 일을 했습니다. 하지만 **Property not 'examNo' found on type** 이라는 에러메시지와 함께
 프로그램이 돌아가지 않았습니다. <br>
  
-##디버그 해보기
+## 디버그 해보기
 리스트에 데이터는 잘 담겼는지 확인하기 위해 Controller 에 디버깅을 걸어보았습니다. 
 ![debug-capture](https://user-images.githubusercontent.com/45488643/72199781-e96fcd80-3483-11ea-8235-4f7d0d35f5f9.jpg)
 분명 examList 이름도 문제 없고, jsp 에 데이터 전달도 잘 되었을텐데.. 
 jsp 에서는 examNo 라는 Property 를 못찾는게 이해가 되지않았습니다.
 
-##Vo 확인하기
+## Vo 확인하기
 데이터에 잘 담겼다면 Controller 의 문제가 아닌 걸로 확정 짓고, 데이터를 담아주는 Vo 에서 문제가 있는 지 확인해보았습니다.
 
 ![vo](https://user-images.githubusercontent.com/45488643/72199786-fab8da00-3483-11ea-9d9e-e29697ff208d.jpg)
@@ -27,7 +27,7 @@ jsp 에서는 examNo 라는 Property 를 못찾는게 이해가 되지않았습�
 <br>
 출처: https://limeeyojung.tistory.com/15
 
-##구글링 하기
+## 구글링 하기
 그런데 검색결과 중 스택오버플로우의 답변에서 아차 싶었다는 걸 발견!!!
 주저리주저리 길게 영어로 친절히 써있지만 요약하자면,
  jsp 내에서 프로퍼티 참조는 **getter** 고, 이름규칙(네이밍 컨벤션)은 
@@ -50,13 +50,13 @@ jsp 에서는 examNo 라는 Property 를 못찾는게 이해가 되지않았습�
 ![result](https://user-images.githubusercontent.com/45488643/72199814-6f8c1400-3484-11ea-98e6-667e56242b10.jpg)
 
 
-##시사점
+## 시사점
 1. jsp에서 프로퍼티 접근은 변수로 직접 접근하는게 아니라, getter 를 통해 호출된다는걸 잊고 있었다
     - 더불어  boolean 형은 is~~~()를 호출하는 것도 잊지 말아야..
 2. jsp도 결국 servlet class로 변환되고, $(exam.examNo} 부분은 실제로 out.print(exam.getExamNo());형태로 바뀌어 동작할 것이다. 
 3. private int examNo 는 private 이라 외부 클래스에서 접근이 당근 불가능하다 **(캡슐화되어있기때문에)**
 
-##에러 해결 후 관련 책 찾기
+## 에러 해결 후 관련 책 찾기
 
 에러를 해결 했다고 끝이 아닙니다. HEAD FIRST - Servlet & JSP 책을 찾아보고 
 앞으로 이런 에러가 발생했을 때 수 많은 해결방법을 시도하다가 시간을 허비하지말고 
