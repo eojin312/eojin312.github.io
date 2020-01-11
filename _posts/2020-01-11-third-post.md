@@ -25,7 +25,7 @@ jsp 에서는 examNo 라는 Property 를 못찾는게 이해가 되지않았습�
 이런 케이스도 경험했긴했지만, 지금은 이 케이스가 아닙니다.
 그래도 이 케이스도 삽질 않기위해 지금 한번 더 머리속에 쏙쏙 넣어두었습니다.
 <br>
-출처: https://limeeyojung.tistory.com/15
+출처: (https://limeeyojung.tistory.com/15)
 
 ## 구글링 하기
 그런데 검색결과 중 스택오버플로우의 답변에서 아차 싶었다는 걸 발견!!!
