@@ -22,7 +22,7 @@ jsp 에서는 examNo 라는 Property 를 못찾는게 이해가 되지않았습�
 
 ![capture](https://user-images.githubusercontent.com/45488643/72199792-1b812f80-3484-11ea-9348-d67e9462d73e.jpg)
 
-이런 케이스도 경험했긴했지만, 지금은 이 케이스가 아닙니다.
+이런 케이스도 경험했긴했지만, 지금은 이 케이스가 아닙니다.   
 그래도 이 케이스도 삽질 않기위해 지금 한번 더 머리속에 쏙쏙 넣어두었습니다.
 <br>
 출처: (https://limeeyojung.tistory.com/15)
