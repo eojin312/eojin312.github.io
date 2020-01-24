@@ -42,4 +42,4 @@ public class ListTest {
 
 > 위에서 언급했던 <? super T>  는 뭘까?
  
-T 는 Type 을 뜻합니다. 
+T 는 Type 을 뜻합니다. ㅇ
