@@ -1,6 +1,6 @@
 ---
 title: "headfirst-java 후기"
-date: 2020-02-01 16:14:28 -0400
+date: 2020-06-01 16:14:28 -0400
 categories: 기술서적
 ---
 
