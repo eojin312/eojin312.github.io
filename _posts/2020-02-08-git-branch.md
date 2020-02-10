@@ -17,8 +17,6 @@ categories: 개인공부
 >git branch [branch name]
 
 혹은 sourceTree 를 사용한다면 우클릭을 눌러 새 브렌치를 누르면 된다
-
- ![스크린샷 2020-02-08 오후 5 45 16](https://user-ima ges.githubusercontent.com/45488643/74082172-d3f9bd80-4a9a-11ea-95c4-a32b28421ddc.png)
  
 ## 변경
 
