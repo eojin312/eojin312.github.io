@@ -24,6 +24,7 @@ brew install gradle
 막 homebrew도 업데이트하고, 로그에 보니까 openjdk13도 지가 막 다운로드하고 
 내가 뭘해야할지 가이드도 로그에 나옴
 
+```console
 For the system Java wrappers to find this JDK, symlink it with
   sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
@@ -39,6 +40,7 @@ If you need to have openjdk first in your PATH run:
 
 For compilers to find openjdk you may need to set:
   export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+```
 
 그래서 시키는대로 함
 1. 심볼릭 잡기
