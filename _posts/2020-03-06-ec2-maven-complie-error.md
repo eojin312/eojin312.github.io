@@ -40,21 +40,21 @@ pom에 설정된 자바버전도 자바8이다.
 
 컴파일 단계 오류였으니... javac가 어디에 있는지 확인부터
  ```console
-[ec2-user@freelec-springboot-webservice bin]$ which javac
+$ which javac
 /usr/bin/javac
 ```
 
 readlink로 위치 확인해보자..어디있느냐...
 ```console
-[ec2-user@freelec-springboot-webservice bin]$ readlink -f /usr/bin/javac
+$ readlink -f /usr/bin/javac
 /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.231.x86_64/bin/javac
 ```
 
 어랏!!! 1.7이네... 근데.. java는 버전이 머지?
 ```console
-[ec2-user@freelec-springboot-webservice bin]$ which java
+$ which java
 /usr/bin/java
-[ec2-user@freelec-springboot-webservice bin]$ readlink -f /usr/bin/java
+$ readlink -f /usr/bin/java
 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.50.amzn1.x86_64/jre/bin/java
 ```
 
@@ -66,19 +66,18 @@ javac는 7이었고, mvn test 시 compile이 선행되어야하는데 7로 컴�
 
 일단 JAVA_HOME이 어딘지부터 확인해보자
 ```console
-[ec2-user@freelec-springboot-webservice fl-springboot]$ echo $JAVA_HOME
+$ echo $JAVA_HOME
 /usr/lib/jvm/java
 ```
 
 /usr/lib/jvm/java 요기에 있는 /bin에 있는 java -version을 해보니 이 녀석이 7이다..
 ```console
-[ec2-user@freelec-springboot-webservice bin]$ pwd
+$ pwd
 /usr/lib/jvm/java/bin
-[ec2-user@freelec-springboot-webservice bin]$ ./java -version
+$ ./java -version
 java version "1.7.0_231"
 OpenJDK Runtime Environment (amzn-2.6.19.1.80.amzn1-x86_64 u231-b01)
 OpenJDK 64-Bit Server VM (build 24.231-b01, mixed mode)
-[ec2-user@freelec-springboot-webservice bin]$ 
 ```
 일단, 메이븐이 컴파일할때 JAVA_HOME을 참조해서 bin밑에 있는 javac를 찾아갈 것이다.
 그래서 JAVA_HOME을 새로설치했던 8로 바꿔주면 해결될 듯 싶다.
@@ -86,7 +85,7 @@ OpenJDK 64-Bit Server VM (build 24.231-b01, mixed mode)
 그래서 /etc/profile에 JAVA_HOME과 PATH, CLASS_PATH를 모두 8 경로로 바꿔준다.
 /etc/profile의 맨 끝에 저 3줄을 붙여줬다
 ```console
-[ec2-user@freelec-springboot-webservice bin]$ sudo vi /etc/profile
+$ sudo vi /etc/profile
 ~~~~ 중략 ~~~~~
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.50.amzn1.x86_64/jre
 export PATH=$JAVA_HOME/bin/:$PATH
@@ -95,6 +94,6 @@ exprot CLASS_PATH=$JAVA_HOME/lib/:$CLASS_PATH
 
 그 다음에 source라는 명령어로 적용을 시키고, ec2를 재시작!! 고고~~~
 ```console
-[ec2-user@freelec-springboot-webservice bin]$ source /etc/profile
-[ec2-user@freelec-springboot-webservice bin]$ reboot now
+$ source /etc/profile
+$ reboot now
 ```
