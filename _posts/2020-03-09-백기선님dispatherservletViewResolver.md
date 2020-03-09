@@ -1,5 +1,5 @@
 ---
-title: "백기선님 DispatherServlet3부 viewresolver"
+title: "백기선님 DispatherServlet3부 viewResolver"
 date: 2020-03-09 09:20:28 -0400
 categories: 개인공부
 ---
