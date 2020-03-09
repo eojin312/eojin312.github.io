@@ -1,5 +1,5 @@
 ---
-title: "ec2 배포하기위한 deploy.sh"
+title: "ec2에서 배포하기 2탄"
 date: 2020-03-09 16:20:28 -0400
 categories: 개인공부
 ---
