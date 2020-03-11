@@ -28,3 +28,12 @@ public ViewResolver viewResolver() {
 setPrefix 는 지정한 경로 밑의 파일들을 가져와주고, setSuffix 는 .jsp 로 끝나는 파일들을 찾아와준다.
 이렇게 해주면 굳이 Controller 에서 return "/WEB-INF/sample.jsp" 라고 번거롭게 치지않아도된다
 ViewResolver가 알아서 다 해주기 때문!
+
+다른 방법은 mvc-config 에 이렇게 직접 명시해두면 된다. 저는 이 방식을 사용했습니다
+```xml
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/view"/>
+        <property name="order" value="1"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+```
