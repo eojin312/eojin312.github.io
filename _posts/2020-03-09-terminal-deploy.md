@@ -43,16 +43,8 @@ echo "> 새 애플리케이션 배포"
 
 JAR_NAME = $(ls -tr $REPOSITORY/ | grep *.jar | tail -n 1)
 
-echo "> JAR Name : $JAR_NAME"
-
 nohup java -jar $REPOSITORY/$JAR_NAME 2>&1 &
 ```
 
-저장 후 나가려 했는데 아니 뭔;
 
-![스크린샷 2020-03-09 오후 4 07 21](https://user-images.githubusercontent.com/45488643/76190422-4be51000-6220-11ea-841d-ec1ef0f06374.png)
-
-봤더니 책대로 하니 문제였던 것이다 git 파일을 만들지도 않았는데 git의 step1 의 deploy.sh 를 실행시켜서 저장하려고 하니 저장이 안되는게 당연하다
-
-그래서 정석대로 git 파일을 따로 만들고 다시 배포했더니 잘 돌아간다
 
