@@ -3955,7 +3955,8 @@ body {
 }
 
 .archive__item a[rel="permalink"] {
-    position: static
+    position: static;
+    text-decoration: none
 }
 
 .archive__subtitle {
