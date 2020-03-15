@@ -3485,7 +3485,7 @@ body {
 }
 
 .page__content p,.page__content li,.page__content dl {
-    font-size: 1em
+    font-size: 15px
 }
 
 .page__content p {
@@ -3999,7 +3999,7 @@ body {
 .archive__item-excerpt {
     margin-top: 0;
     /* font-size: .75em */
-    font-size : 45px;
+    font-size : 15px;
 }
 
 .archive__item-excerpt+p {
