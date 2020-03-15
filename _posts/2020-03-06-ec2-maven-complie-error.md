@@ -89,7 +89,7 @@ $ sudo vi /etc/profile
 ~~~~ 중략 ~~~~~
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.50.amzn1.x86_64/jre
 export PATH=$JAVA_HOME/bin/:$PATH
-exprot CLASS_PATH=$JAVA_HOME/lib/:$CLASS_PATH
+export CLASS_PATH=$JAVA_HOME/lib/:$CLASS_PATH
 ```
 
 그 다음에 source라는 명령어로 적용을 시키고, ec2를 재시작!! 고고~~~
