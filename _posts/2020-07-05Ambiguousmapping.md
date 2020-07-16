@@ -37,6 +37,7 @@ public class PostController {
 사실 해결방법은 간단합니다. url을 겹치지않게만 하면 되는 것입니다! 에러난 메시지를 안읽어보면 controller bean 이 생성되지 않았다고 오해할까봐 적어둡니다.
 
 
+
 **해결한 PostController**
 ```java
 @Controller
@@ -48,7 +49,7 @@ public class PostController {
         return "post/detail";
     }
 
-    @GetMapping("/post/update/{id}")
+    @GetMapping("/post/{id}/update")
     public String update(@PathVariable Long id, Model model) {
         model.addAttribute("id", id);
         return "post/update";
