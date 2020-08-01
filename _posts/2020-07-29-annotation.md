@@ -36,6 +36,24 @@ public class SampleController {
 }
 ```
 
+## 메타 어노테이션 종류
+ 1. @Retention
+    
+    - 어떤 시점까지 어노테이션이 영향 미치는 지 결정합니다.
+    
+```java
+@Retention(RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.CLASS) 
+@Retention(RetentionPolicy.SOURCE)
+```
+ - RUNTIME => 컴파일 이후에도 JVM이 참조 가능합니다.
+ - CLASS => 컴파일러가 클래스를 참조할 때까지만 유효합니다.
+ - SOURCE => 이 어노테이션은 컴파일 이후 사라집니다. 
+ 
+ 2. @Target
+ 
+ -> 공부 좀 더 하고 보강할 예정입니다
+
 # 조합 어노테이션
 
  한 개 혹은 여러개의 어노테이션을 조합하여 만든 어노테이션
