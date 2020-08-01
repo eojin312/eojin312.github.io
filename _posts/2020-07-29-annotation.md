@@ -66,6 +66,13 @@ public class SampleController {
  
  - 어노테이션을 어떤 요소에 적용할지 지정
  
+```java
+@Target(ElementType.ANNOTATION_TYPE)
+@Target(ElementType.METHOD)
+@Target(ElementType.FIELD)
+..등등..
+```
+타겟에 설정한 범위에서만 사용가능한 어노테이션을 정의할수있다
 
 ## 컴포스트(조합) 어노테이션
 한 개 혹은 여러 개의 메타 어노테이션을 조합해서 만든 커스텀 어노테이션. 이건 이미 조합된 어노테이션이라 커스텀 어노테이션에 사용 못합니다.
