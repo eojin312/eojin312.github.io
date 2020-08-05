@@ -3,6 +3,9 @@ title: "Argument ReturnType"
 date: 2020-07-30 13:20:28 -0400
 categories: 공부
 ---
+# Handler Method Argument
+주로 요청 그 자체 또는 요청에 들어있는 정보를 받아드리는 곳에 사용한다
+
 ## Stream
 단일 방향으로 연속적으로 흘러가는 것
 
@@ -30,18 +33,6 @@ public String list(PushBuilder pushBuilder) {
 ```
 
 
-## HttpMethod 
-spring꺼다
-요청의 메소드가 무엇인지 알 수 있다
-
-**어쩔 때 쓰냐면**
-
-RequestMapping 을 그냥 하면 여러가지 method 를 받는다
-{RequestMapping.GET, RequestMapping.POST} 과 같이 받고싶은 method 만 받을 수 있는데
-그럴 때 어떻게 처리하고싶은지 따로 정하고싶으면 httpmethod 를 사용해도 좋다.
-
-Locale, TimeZone zoneid 이 데이터들은 스프링 웹mvc 가 localeResolver interface 를 사용해서
-요청을 분석하고 그 정보를 파라미터에 넣어준다 
 
 # 결론
 
