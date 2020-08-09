@@ -27,3 +27,6 @@ include 역할
 
 ## th:attr
 attribute 를 thymeleaf 로 정의할 때
+
+## th:each
+콜렉션을 반복하며 화면처리
