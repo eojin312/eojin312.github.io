@@ -19,6 +19,7 @@ logging:
 
 yml 은 조심해야할 부분이 있습니다.
 ![applicationyml](https://user-images.githubusercontent.com/45488643/90372031-bd1bcf80-e0aa-11ea-8d6a-1e23e0b1e6fb.png)
+
 logging 부분에 들여쓰기를 잘못하면 org.~~~:trace 이 동작안합니다.
 **꼭 logging 부분을 들여쓰기하지말고 벽에 붙여야합니다!!**
 
