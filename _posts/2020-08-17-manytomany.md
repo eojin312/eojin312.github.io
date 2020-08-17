@@ -22,10 +22,11 @@ where 절에 카테고리 적용해서 리스트 뽑아내면 참 좋겠다고 �
 뭐요? 게시글을 추가할 때 category 도 추가해야하는데 insert 할 때 어쩌냐고요? 그럴 땐 윗 사진의 **category_mapping** 처럼 연결 테이블을 하나 두고 
 foreigen key 만 모아두는 테이블로 서로 연결시켜주면 됩니다.
 
-jpa 에 @ManyToMany 처럼 **다 대 다** 관계를 처리하는 어노테이션이 있습니다.
+jpa 에 @ManyToMany 가 있습니다 이 어노테이션은 **다 대 다** 관계를 처리할 수 있습니다.
+
 ![jointable](https://user-images.githubusercontent.com/45488643/90357196-12e17f00-e08d-11ea-8871-a61482355549.png)
 
-@ManyToMany 는 이런 식으로 우리가 설계했던 관계로 처리해줍니다. 하지만 @ManyToMany엔 여러 문제가 있는데 일단 코드로 봐봅시다!
+@ManyToMany 를 이용해서 코드를 짜면 이런 형식으로 우리가 설계했던 관계로 처리해줍니다. 하지만 @ManyToMany엔 여러 문제가 있는데 일단 코드로 봐봅시다!
 
 ## ManyToMany 로 관계 짓기(실제 예제 코드)
 
