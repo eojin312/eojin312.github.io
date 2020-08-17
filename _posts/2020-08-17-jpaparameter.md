@@ -31,12 +31,6 @@ logging.level.org.hibernate.type.descriptor.sql=trace
 
 **결과물!**
 ```sql
-insert 
-into
-    category
-    (category_id, name) 
-values
-    (null, ?)
 Hibernate: 
 insert 
 into
