@@ -48,6 +48,7 @@ categories: 알고리즘
 먼저 들어간 기능의 일수가 더 많거나 같으면 배포할 때 수 (numOfDeploy) 가 증가합니다
 그게 아니라면 1 로 다시 초기화 해줍니다. 그리고 for 문에서 다음 기능일 수를 비교하기 위해
 최근 기능개발 일 수(currWorkDay)를 이전 기능개발 일 수 (prevWorkDay) 에 넣어줍니다.
+
 ```java
 public int[] solution(int[] progresses, int[] speeds) {
     Queue<Integer> queue = new ConcurrentLinkedQueue();
@@ -71,12 +72,13 @@ public int[] solution(int[] progresses, int[] speeds) {
     resultList.add(numOfDeploy);
 
     return resultList.stream().mapToInt(i -> i).toArray();
-    
 ```
 
 
 ## 꼭 Queue 를 써야만 풀리는 문제일까?
+
 그건 아닙니다! 단순히 for문 만 사용해서 문제 풀어보았습니다.
+
 ```java
 public int[] solution2(int[] progresses, int[] speeds) {
     List<Integer> resultList = new ArrayList<>();
