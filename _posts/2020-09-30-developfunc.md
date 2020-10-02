@@ -35,6 +35,7 @@ categories: 알고리즘
 
 따라서 5일째에 1개의 기능, 10일째에 3개의 기능, 20일째에 2개의 기능이 배포됩니다.
 
+문제 링크: [https://programmers.co.kr/learn/courses/30/lessons/42584](https://programmers.co.kr/learn/courses/30/lessons/42584)
 
 ## 문제 요약
 기능 개발에는 순서가 정해져있는데 먼저 끝내야할 기능보다 나중에 끝내도 될 기능이 먼저 개발된다면
